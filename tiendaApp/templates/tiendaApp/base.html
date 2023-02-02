@@ -31,11 +31,11 @@
     <div style="text-align: right; margin-right: 100px; color: white">
      {% if user.is_authenticated %}
 
-     Hola {{ user.username }}<br> &nbsp; &nbsp; <a href="{% url 'logout' %}">Cerrar Sesion</a>
+     Hola {{ user.username }}<br> &nbsp; &nbsp; <a style="color:inherit" href="{% url 'logout' %}">Cerrar Sesion</a>
      
 
      {% else %}
-      <a href="{% url 'login' %}">Login</a> &nbsp; &nbsp; <a href="{% url 'registro' %}">Registrate</a>
+      <a style="color:inherit" href="{% url 'login' %}">Login</a> &nbsp; &nbsp; <a style="color:inherit" href="{% url 'registro' %}">Registrate</a>
      {% endif %}
     </div>
 
