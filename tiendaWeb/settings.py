@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-import dj_database_url
+
 from django.contrib.messages import constants as mensajes_de_error
 from pathlib import Path
 import os
