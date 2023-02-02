@@ -92,12 +92,8 @@ WSGI_APPLICATION = "tiendaWeb.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '3KOPTqL2ZlSc76uHDvnm',
-        'HOST': 'containers-us-west-114.railway.app',
-        'PORT': '7231',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
