@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<h1>auttenticacion</h1>
+<h1 style="text-align:center;color:white; margin: 10px auto">auttenticacion</h1>
 <form method="post" action="" style="color:white;width:300px;margin:auto;text-align:center;margin-button:30px">
   {% csrf_token %} {{form|crispy}}
   <button  type="submit" class="btn btn-success">Registrate</button>
