@@ -179,3 +179,4 @@ MESSAGES_TAGS = {
     mensajes_de_error.WARNING: 'warnig',
     mensajes_de_error.ERROR: 'danger',
 }
+MIME_TYPE = 'application/javascript'
