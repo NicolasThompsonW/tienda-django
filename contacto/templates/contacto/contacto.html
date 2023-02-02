@@ -1,0 +1,24 @@
+{% extends 'tiendaApp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1 style="margin:auto;color:white; text-align:center;">Contacto</h1>
+
+
+
+<form class="contenedorFormulario"  action="" method="post">
+    
+    {% if 'valido' in request.GET %}
+    <p style="color:white">Informacion enviada</p>
+    {% endif %}
+
+
+    {% csrf_token %}
+    <table style="color:white;margin:20px auto" >{{ form.as_table }}</table>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,10 @@
+/venv/
+*.sqlite3
+notas.txt
+*.zip
+/media/
+.env
+/__pycache__/
+__pycache__
+/migrations/
+migrations

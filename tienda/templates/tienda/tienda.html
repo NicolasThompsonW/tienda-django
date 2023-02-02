@@ -1,0 +1,47 @@
+{% extends 'tiendaApp/base.html' %} {% load static %} {% block content %} <
+
+<div class="container">
+  <div style="float: right">
+    <p style="color: aliceblue"></p>
+
+    {% if user.is_authenticated %}
+    
+      {% include "carro/widget.html" %}
+    {% else %}
+
+    <div class="alert alert-danger text-center">
+
+      Login Para Ver Carro
+    </div>
+    
+    {% endif %}
+  </div>
+  <div class="row">
+    {% for producto in productos %}
+    <div class="col-md-3">
+      <div class="card" style="width: 100%; margin: 5px 5px">
+        <img
+          src="{{producto.imagen.url}}"
+          class="card-img-top"
+          alt=""
+          style="margin: auto; margin-top: 10px"
+          height="200"
+          width="200"
+        />
+
+        <div class="card-body" style="text-align: center">
+          <h6 class="card-title">{{producto.nombre}}</h6>
+          <p class="card-text">{{ producto.precio }}&nbsp;$</p>
+        </div>
+
+        <div class="card-footer text-center">
+          <a href="{% url 'carro:agregar' producto.id %} " class="btn btn-success">Agregar al carro</a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
