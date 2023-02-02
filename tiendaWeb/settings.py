@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import dj_database_url
 from django.contrib.messages import constants as mensajes_de_error
 from pathlib import Path
 import os
@@ -89,13 +90,24 @@ WSGI_APPLICATION = "tiendaWeb.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+""" 
+una manera de conectarse 
 
+import dj_database_url
+DATABASES = {'default': dj_database_url.config(
+    default='postgresql://postgres:UGtctL7dlGSxlJqsc2um@containers-us-west-162.railway.app:6362/railway', engine='django.db.backends.postgresql')}
+ """
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'UGtctL7dlGSxlJqsc2um',
+        'HOST': 'containers-us-west-162.railway.app',
+        'PORT': '6362',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
