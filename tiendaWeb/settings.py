@@ -29,7 +29,7 @@ REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-y*ni-)u8bv6cpn=-*^rrt72+wa_9hxf5p!7o01ugxunb-mbt&r"
 
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = None
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = ["https://tienda-django-production.up.railway.app"]
 # SECURITY WARNING: don't run with debug turned on in production!
