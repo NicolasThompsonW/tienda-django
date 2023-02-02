@@ -2,7 +2,7 @@
 *.sqlite3
 notas.txt
 *.zip
-/media/
+/media2/
 .env
 /__pycache__/
 __pycache__
