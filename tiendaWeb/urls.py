@@ -15,11 +15,11 @@ urlpatterns = [
     path('autenticacion/', include("autenticacion.urls")),
     path('pedidos/', include("pedidos.urls")),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 # Para servir las imagenes en desarrollo
 # url para servir las imagenes
-if debug:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+
+urlpatterns += static(settings.MEDIA_URL,
+                      document_root=settings.MEDIA_ROOT)
