@@ -31,7 +31,7 @@ SECRET_KEY = "django-insecure-y*ni-)u8bv6cpn=-*^rrt72+wa_9hxf5p!7o01ugxunb-mbt&r
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*',
                  'tienda-django-production.up.railway.app']
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
+    "whitenoise.runserver_nostatic",
 
 
     'tiendaApp',
@@ -62,8 +62,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
 
-
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -73,8 +73,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "tiendaWeb.urls"
-
-
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -158,7 +162,7 @@ USE_TZ = True
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'staticfiles/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(REPOSITORY_ROOT, 'media/')
