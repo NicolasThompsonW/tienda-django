@@ -21,7 +21,6 @@ urlpatterns = [
 # Para servir las imagenes en desarrollo
 # url para servir las imagenes
 
-""" if debug:
-    urlpatterns += static(settings.MEDIA_URL,
+
+urlpatterns += static(settings.MEDIA_URL,
                       document_root=settings.MEDIA_ROOT)
- """
