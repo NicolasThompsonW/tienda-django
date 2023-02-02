@@ -29,7 +29,7 @@ REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-y*ni-)u8bv6cpn=-*^rrt72+wa_9hxf5p!7o01ugxunb-mbt&r"
 
-
+CSRF_COOKIE_SECURE = True
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
