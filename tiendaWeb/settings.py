@@ -33,7 +33,7 @@ CSRF_COOKIE_SECURE = None
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = ["https://tienda-django-production.up.railway.app"]
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*',
                  'tienda-django-production.up.railway.app']

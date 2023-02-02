@@ -12,6 +12,5 @@ def tienda(request):
         "productos": productos,
         "categorias": categorias
     }
-    print(request.session.items())
 
     return render(request, 'tienda/tienda.html', context)
