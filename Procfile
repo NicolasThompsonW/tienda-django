@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn tiendaWeb.wsgi
+web: gunicorn tiendaWeb.wsgi
